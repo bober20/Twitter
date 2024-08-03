@@ -24,6 +24,8 @@
 		478CBFFD2C53FA8800E7CA8B /* PostDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478CBFFC2C53FA8800E7CA8B /* PostDetailsView.swift */; };
 		478CBFFF2C53FA9300E7CA8B /* PostDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478CBFFE2C53FA9300E7CA8B /* PostDetailsViewModel.swift */; };
 		47B4B9BE2C5E5649000898CD /* PostDisplayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B4B9BD2C5E5649000898CD /* PostDisplayViewModel.swift */; };
+		47B4B9C02C5E9523000898CD /* AddPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B4B9BF2C5E9523000898CD /* AddPostView.swift */; };
+		47B4B9C22C5E9531000898CD /* AddPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B4B9C12C5E9531000898CD /* AddPostViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,8 @@
 		478CBFFC2C53FA8800E7CA8B /* PostDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsView.swift; sourceTree = "<group>"; };
 		478CBFFE2C53FA9300E7CA8B /* PostDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsViewModel.swift; sourceTree = "<group>"; };
 		47B4B9BD2C5E5649000898CD /* PostDisplayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDisplayViewModel.swift; sourceTree = "<group>"; };
+		47B4B9BF2C5E9523000898CD /* AddPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostView.swift; sourceTree = "<group>"; };
+		47B4B9C12C5E9531000898CD /* AddPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +142,7 @@
 				478CBFFE2C53FA9300E7CA8B /* PostDetailsViewModel.swift */,
 				474255D02C57A18900F820E1 /* ProfileViewModel.swift */,
 				4708F2962C5B85A500E992D0 /* BaseViewModel.swift */,
+				47B4B9C12C5E9531000898CD /* AddPostViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -150,6 +155,7 @@
 				478CBFE72C53BF5700E7CA8B /* MainView.swift */,
 				478CBFFC2C53FA8800E7CA8B /* PostDetailsView.swift */,
 				474255CE2C57A17B00F820E1 /* ProfileView.swift */,
+				47B4B9BF2C5E9523000898CD /* AddPostView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -232,12 +238,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47B4B9C22C5E9531000898CD /* AddPostViewModel.swift in Sources */,
 				47B4B9BE2C5E5649000898CD /* PostDisplayViewModel.swift in Sources */,
 				478CBFFB2C53C74700E7CA8B /* MainViewModel.swift in Sources */,
 				4708F2972C5B85A500E992D0 /* BaseViewModel.swift in Sources */,
 				474255CF2C57A17B00F820E1 /* ProfileView.swift in Sources */,
 				478CBFFF2C53FA9300E7CA8B /* PostDetailsViewModel.swift in Sources */,
 				4708F29A2C5BCD3000E992D0 /* PostDisplayView.swift in Sources */,
+				47B4B9C02C5E9523000898CD /* AddPostView.swift in Sources */,
 				4708F29C2C5D057E00E992D0 /* ColorView.swift in Sources */,
 				474255D12C57A18900F820E1 /* ProfileViewModel.swift in Sources */,
 				478CBFF92C53C39C00E7CA8B /* User.swift in Sources */,

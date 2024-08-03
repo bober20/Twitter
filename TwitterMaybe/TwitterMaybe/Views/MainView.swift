@@ -12,7 +12,7 @@ struct MainView: View {
     @State private var viewModel: MainViewModel
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
                 VStack {
                     Text("New posts")

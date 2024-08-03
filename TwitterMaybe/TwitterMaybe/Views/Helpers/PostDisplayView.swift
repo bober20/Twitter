@@ -15,7 +15,7 @@ struct PostDisplayView: View {
             VStack {
                 HStack {
                     NavigationLink {
-                        viewModel.BuildProfileView(user: viewModel.post.author)
+//                        viewModel.BuildProfileView(for: viewModel.post.author)
                     } label: {
                         Image("Image")
                             .resizable()
@@ -25,6 +25,8 @@ struct PostDisplayView: View {
                         Text(viewModel.post.author.name)
                         Text(viewModel.post.author.nickname)
                     }
+                    .foregroundStyle(.black)
+                    
                     Spacer()
                 }
                 .font(.title3)
@@ -36,8 +38,9 @@ struct PostDisplayView: View {
                     } label: {
                         Text(viewModel.post.content)
                             .font(.title3)
+                            .foregroundStyle(.black)
+                        Spacer()
                     }
-                    Spacer()
                 }
                 
                 HStack {

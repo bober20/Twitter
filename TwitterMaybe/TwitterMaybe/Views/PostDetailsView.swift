@@ -14,17 +14,22 @@ struct PostDetailsView: View {
         VStack {
             VStack {
                 HStack {
-                    Image("Image")
-                        .resizable()
-                        .clipShape(Circle())
-                        .overlay(Circle().stroke(.white))
-                        .frame(width: 50, height: 50)
-                    Text(viewModel.post.author.name)
-                    Text(viewModel.post.author.nickname)
-                    Spacer()
+                    NavigationLink {
+//                        viewModel.BuildProfileView(for: viewModel.post.author)
+                    } label: {
+                        Image("Image")
+                            .resizable()
+                            .clipShape(Circle())
+                            .overlay(Circle().stroke(.white))
+                            .frame(width: 50, height: 50)
+                        Text(viewModel.post.author.name)
+                        Text(viewModel.post.author.nickname)
+                        Spacer()
+                    }
                 }
                 .font(.title3)
                 .bold()
+                .foregroundStyle(.black)
                 
                 HStack {
                     Text(viewModel.post.content)

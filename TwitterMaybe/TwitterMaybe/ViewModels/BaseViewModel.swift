@@ -14,11 +14,11 @@ class BaseViewModel {
         return PostDetailsView(for: post)
     }
     
-    func BuildProfileView(user: User) -> some View {
-        return ProfileView()
+//    func BuildProfileView(for user: User) -> some View {
+//        return ProfileView(model, for: user)
         
 //        return ProfileView().environmentObject(ProfileViewModel(user: user))
         
         
-    }
+//    }
 }
