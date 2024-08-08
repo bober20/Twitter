@@ -11,18 +11,17 @@ import SwiftData
 
 
 class ProfileViewModel: BaseViewModel, ObservableObject, Identifiable {
-    var modelContext: ModelContext
+    var modelContext: ModelContext? = nil
     var user: User
-    @Published var posts: [Post]
+    @Published var posts: [Post] = []
     
-    init(modelContext: ModelContext, for user: User) {
+    init(for user: User) {
         self.user = user
-        self.modelContext = modelContext
         
         posts = self.user.posts.sorted(by: {$0.date > $1.date})
     }
     
     func BuildAddPostView() -> some View {
-        return AddPostView(modelContext: modelContext, author: user)
+        return AddPostView(author: user)
     }
 }

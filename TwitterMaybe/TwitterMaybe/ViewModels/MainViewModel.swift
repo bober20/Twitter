@@ -11,19 +11,13 @@ import SwiftData
 
 
 class MainViewModel: BaseViewModel, ObservableObject{
-    private let modelContext: ModelContext
-    var posts = [Post]()
-    
-    init(modelContext: ModelContext) {
-        self.modelContext = modelContext
-        super.init()
-        fetchData()
-    }
+    var modelContext: ModelContext? = nil
+    @Published var posts: [Post] = []
     
     func fetchData() {
         do {
             let descriptor = FetchDescriptor<Post>(sortBy: [SortDescriptor(\.date, order: .reverse)])
-            posts = try modelContext.fetch(descriptor)
+            posts = try modelContext!.fetch(descriptor)
         } catch {
             print("Fetch failed")
         }

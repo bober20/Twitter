@@ -9,7 +9,8 @@ import SwiftUI
 import SwiftData
 
 struct ProfileView: View {
-    @State var viewModel: ProfileViewModel
+    @Environment(\.modelContext) var modelContext
+    @ObservedObject var viewModel: ProfileViewModel
     
     var body: some View {
         NavigationStack {
@@ -54,15 +55,19 @@ struct ProfileView: View {
                 
             }
         }
+        .onAppear {
+            viewModel.modelContext = modelContext
+        }
         
     }
+        
     
     
-    init(modelContext: ModelContext, for user: User) {
-        self.viewModel = ProfileViewModel(modelContext: modelContext, for: user)
+    init(for user: User) {
+        self.viewModel = ProfileViewModel(for: user)
     }
 }
 
 #Preview {
-    ProfileView(modelContext: AppContainer.mainContext, for: User(name: "l", nickname: "aaa"))
+    ProfileView(for: User(name: "l", nickname: "aaa"))
 }

@@ -9,6 +9,7 @@ import SwiftUI
 import SwiftData
 
 struct AddPostView: View {
+    @Environment(\.modelContext) var modelContext
     @ObservedObject private var viewModel: AddPostViewModel
     
     var body: some View {
@@ -26,15 +27,19 @@ struct AddPostView: View {
             Spacer()
         }
         .padding()
+        .onAppear {
+            viewModel.modelContext = modelContext
+        }
         
         
     }
     
-    init(modelContext: ModelContext, author: User) {
-        viewModel = AddPostViewModel(modelContext: modelContext, author: author)
+    
+    init(author: User) {
+        viewModel = AddPostViewModel(author: author)
     }
 }
 
 #Preview {
-    AddPostView(modelContext: AppContainer.mainContext, author: User(name: "ll", nickname: "s"))
+    AddPostView(author: User(name: "ll", nickname: "s"))
 }

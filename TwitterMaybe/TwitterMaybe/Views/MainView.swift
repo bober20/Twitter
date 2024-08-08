@@ -9,7 +9,8 @@ import SwiftUI
 import SwiftData
 
 struct MainView: View {
-    @State private var viewModel: MainViewModel
+    @Environment(\.modelContext) var modelContext
+    @ObservedObject private var viewModel = MainViewModel()
     
     var body: some View {
         NavigationStack {
@@ -29,15 +30,15 @@ struct MainView: View {
                 }
             }
         }
+        .onAppear {
+            viewModel.modelContext = modelContext
+            viewModel.fetchData()
+        }
     }
-    
-    
-    init(modelContext: ModelContext) {
-        self.viewModel = MainViewModel(modelContext: modelContext)
-    }
+        
 }
 
 
 #Preview {
-    MainView(modelContext: AppContainer.mainContext)
+    MainView()
 }

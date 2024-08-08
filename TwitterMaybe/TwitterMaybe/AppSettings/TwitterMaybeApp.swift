@@ -17,11 +17,11 @@ struct TwitterMaybeApp: App {
     var body: some Scene {
         WindowGroup {
             TabView {
-                MainView(modelContext: modelContainer.mainContext)
+                MainView()
                     .tabItem {
                         Label("Main", systemImage: "book")
                     }
-                ProfileView(modelContext: modelContainer.mainContext, for: currentUser)
+                ProfileView(for: currentUser)
                     .tabItem {
                         Label("Profile", systemImage: "person.crop.circle")
                     }
